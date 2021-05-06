@@ -12,11 +12,9 @@ class Random extends Component {
   }
 
   handleClick(e) {
-
-    
-    const random1 = Math.floor(Math.random() * 8) + 1;
-    const random2 = Math.floor(Math.random() * 8) + 1;
-    const random3 = Math.floor(Math.random() * 8) + 1;
+    const random1 = Math.floor(Math.random() * 7) + 1;
+    const random2 = Math.floor(Math.random() * 7) + 1;
+    const random3 = Math.floor(Math.random() * 7) + 1;
 
     this.setState({
       num1: random1,
@@ -28,9 +26,16 @@ class Random extends Component {
   render() {
     return (
       <div>
-          {/* <h1>{this.state.clicked ? "clicked" : "not clicked"}</h1> */}
-        <h1>{this.state.num1}</h1>
-        <button onClick={this.handleClick}>Pull Lever</button>
+        <h1>
+          <button onClick={this.handleClick}>Pull Lever</button>
+          <br />
+          <br />
+          {this.state.num1} {this.state.num2} {this.state.num3} <br />
+          <br />
+          {this.state.num1 == 7 && this.state.num2 == 7 && this.state.num3 == 7
+            ? "Winner, Winner Chicken Dinner"
+            : "Keep Trying"}
+        </h1>
       </div>
     );
   }
