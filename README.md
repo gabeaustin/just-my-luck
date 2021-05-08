@@ -1,15 +1,22 @@
 # Just My Luck
 
-This is an interactive slot machine. The user has to click the lever (pull the lever) in hopes of getting all 7's. This won't be easy. If the user get three 7's in a row, a winner message is display.
+This is an interactive slot machine. The user has to click the Spin button in hopes of getting three 4's. If the user get three 4's in a row, a winner message is displayed.
 
-For all three numbers, the state was initialized to null. There was a random number generator created to randomly select numbers 1 - 7. Each time the click event happened, the state for all 3 numbers is changed. Once the user gets all three 7's, the game is over and the button (lever) is removed.
+For all three numbers, the state is initialized to 0. There is a random number generator that selects numbers 1 - 4. Each time the click event happens, the state for all three numbers is changed. Once the user gets all three 4's, the game is over and the button is removed.
+
+### Technology Used
+
+:heavy_check_mark:&nbsp;&nbsp; React <br />
+
+<br/>
+<br/>
+
+:octocat:&nbsp;&nbsp;Just My Luck&nbsp;&nbsp;:octocat: <br/>
+:bowtie:&nbsp;&nbsp;A Gabe A. Production&nbsp;&nbsp;:bowtie:
 
 To Do
 ------
 - [ ]  Styling
-- [ ] Write code to remove the `<button>` and replace it with an `<h1>` when the user wins
-- [ ] User Testing
+- [x] Write code to remove the `<button>` and replace it with a message for the winner
+- [ ] Unit Testing
 
-Release Dates
-------
-- Version 1.0 - May 9, 2021
