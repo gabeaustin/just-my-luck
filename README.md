@@ -18,5 +18,4 @@ To Do
 ------
 - [ ]  Styling
 - [x] Write code to remove the `<button>` and replace it with a message for the winner
-- [ ] Unit Testing
 

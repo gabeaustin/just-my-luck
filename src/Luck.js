@@ -25,19 +25,37 @@ class Luck extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Play the 444 Slot</h1>
-        <h1>
-          {this.state.num1} {this.state.num2} {this.state.num3}
-        </h1>
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <h1>Play the 444 Slot</h1>
+          </div>
+        </div>
 
-        {this.state.num1 === 4 &&
-        this.state.num2 === 4 &&
-        this.state.num3 === 4 ? (
-          <h2>Winner, Winner Chicken Dinner</h2>
-        ) : (
-          <button onClick={this.handleClick}>Spin</button>
-        )}
+        <div className="row">
+          <div className="col">
+            <div className="display-1">
+              {this.state.num1} {this.state.num2} {this.state.num3}
+            </div>
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col-sm-12 col-md-12">
+            {this.state.num1 === 4 &&
+            this.state.num2 === 4 &&
+            this.state.num3 === 4 ? (
+              <h2>Winner, Winner Chicken Dinner</h2>
+            ) : (
+              <button
+                onClick={this.handleClick}
+                className="btn btn-success btn-lg"
+              >
+                Spin
+              </button>
+            )}
+          </div>
+        </div>
       </div>
     );
   }
