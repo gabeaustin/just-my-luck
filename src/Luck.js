@@ -33,9 +33,11 @@ class Luck extends Component {
 
         {this.state.num1 === 4 &&
         this.state.num2 === 4 &&
-        this.state.num3 === 4 ? 
-        (<h2>Winner, Winner Chicken Dinner</h2>) : 
-        (<button onClick={this.handleClick}>Spin</button>)}
+        this.state.num3 === 4 ? (
+          <h2>Winner, Winner Chicken Dinner</h2>
+        ) : (
+          <button onClick={this.handleClick}>Spin</button>
+        )}
       </div>
     );
   }
