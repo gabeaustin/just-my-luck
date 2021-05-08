@@ -14,8 +14,12 @@ For all three numbers, the state is initialized to 0. There is a random number g
 :octocat:&nbsp;&nbsp;Just My Luck&nbsp;&nbsp;:octocat: <br/>
 :bowtie:&nbsp;&nbsp;A Gabe A. Production&nbsp;&nbsp;:bowtie:
 
-To Do
-------
-- [ ]  Styling
+Bug
+---
 - [x] Write code to remove the `<button>` and replace it with a message for the winner
 
+Feature
+---
+- [ ] Change background color to 5 different random colors when a user wins
+- [ ] Display winner's message in a pop-up modal
+- [ ] Add a play again button
