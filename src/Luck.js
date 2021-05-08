@@ -50,6 +50,7 @@ class Luck extends Component {
               <button
                 onClick={this.handleClick}
                 className="btn btn-success btn-lg"
+                id="spinButton"
               >
                 Spin
               </button>

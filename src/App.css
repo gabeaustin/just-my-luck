@@ -1,3 +1,10 @@
 .App {
   text-align: center;
 }
+
+@media all and (max-width: 480px) {
+  #spinButton {
+    width: 100%;
+    display: block;
+  }
+}
