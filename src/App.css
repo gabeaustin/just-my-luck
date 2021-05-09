@@ -2,12 +2,29 @@
   text-align: center;
 }
 
+#fullAppContainer {
+  border: pink solid 3px;
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+  background: red;
+}
+
 .mainTitle {
   font-family: "Loved by the King", cursive;
 }
 
 .mainTitleNumbers {
   font-family: "Amita", cursive;
+}
+
+#starterNumbers {
+  font-weight: 500;
+  font-size: 600%;
 }
 
 @media all and (max-width: 480px) {
