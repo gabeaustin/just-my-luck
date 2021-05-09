@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import randomColor from "randomcolor";
 
 class Luck extends Component {
   constructor(props) {
@@ -9,6 +10,12 @@ class Luck extends Component {
       num3: 0,
     };
     this.handleClick = this.handleClick.bind(this);
+
+    this.state = {
+      bgColor: "",
+      display: false,
+    };
+    this.mouseHover = this.mouseHover.bind(this);
   }
 
   handleClick() {
@@ -20,6 +27,13 @@ class Luck extends Component {
       num1: random1,
       num2: random2,
       num3: random3,
+    });
+  }
+
+  mouseHover(e) {
+    let color = randomColor();
+    this.setState({
+      bgColor: color,
     });
   }
 
@@ -54,13 +68,23 @@ class Luck extends Component {
                 You Won
               </h2>
             ) : (
-              <button
-                onClick={this.handleClick}
-                className="btn btn-success btn-lg mainTitle"
-                id="spinButton"
-              >
-                <span className="display-5">Spin</span>
-              </button>
+              <>
+                <button
+                  onClick={this.handleClick}
+                  className="btn btn-success btn-lg mainTitle"
+                  id="spinButton"
+                >
+                  <span className="display-5">Spin</span>
+                </button>
+
+                <button
+                  onClick={this.clickHandler}
+                  style={{ backgroundColor: this.state.bgColor }}
+                  onMouseMove={this.mouseHover}
+                >
+                  Test Button
+                </button>
+              </>
             )}
           </div>
         </div>
