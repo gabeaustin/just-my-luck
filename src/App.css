@@ -3,7 +3,7 @@
 }
 
 #fullAppContainer {
-  border: pink solid 3px;
+  border: #198754 solid 3px;
   position: absolute;
   width: 300px;
   height: 200px;
@@ -11,7 +11,6 @@
   top: 50%;
   left: 50%;
   margin: -100px 0 0 -150px;
-  background: red;
 }
 
 .mainTitle {
@@ -25,6 +24,21 @@
 #starterNumbers {
   font-weight: 500;
   font-size: 600%;
+}
+
+#winnerMessage {
+  border: solid 2px green;
+  position: absolute;
+  width: 150%;
+  height: 100px;
+  z-index: 25;
+  top: 65%;
+  left: 35%;
+  margin: -100px 0 0 -150px;
+  color: green;
+  background-color: indigo;
+  transform: skewY(-20deg);
+  font-family: "Helvetica Neue", Arial;
 }
 
 @media all and (max-width: 480px) {

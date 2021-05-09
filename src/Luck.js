@@ -12,9 +12,9 @@ class Luck extends Component {
   }
 
   handleClick() {
-    let random1 = Math.floor(Math.random() * 4) + 1;
-    let random2 = Math.floor(Math.random() * 4) + 1;
-    let random3 = Math.floor(Math.random() * 4) + 1;
+    let random1 = Math.floor(Math.random() * 2) + 1;
+    let random2 = Math.floor(Math.random() * 2) + 1;
+    let random3 = Math.floor(Math.random() * 2) + 1;
 
     this.setState({
       num1: random1,
@@ -25,7 +25,10 @@ class Luck extends Component {
 
   render() {
     return (
-      <div className="container" id="fullAppContainer">
+      <div
+        className="container border border-success shadow-lg pt-3"
+        id="fullAppContainer"
+      >
         <div className="row">
           <div className="col">
             <h1 className="mainTitle">
@@ -44,10 +47,12 @@ class Luck extends Component {
 
         <div className="row">
           <div className="col-sm-12 col-md-12">
-            {this.state.num1 === 4 &&
-            this.state.num2 === 4 &&
-            this.state.num3 === 4 ? (
-              <h2 className="mainTitle display-3">Winner, Winner Chicken Dinner</h2>
+            {this.state.num1 === 2 &&
+            this.state.num2 === 2 &&
+            this.state.num3 === 2 ? (
+              <h2 className="mainTitle display-1" id="winnerMessage">
+                You Won
+              </h2>
             ) : (
               <button
                 onClick={this.handleClick}
