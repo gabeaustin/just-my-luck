@@ -15,7 +15,7 @@ class Luck extends Component {
       bgColor: "",
       display: false,
     };
-    this.mouseHover = this.mouseHover.bind(this);
+    this.winnerBgChange = this.winnerBgChange.bind(this);
   }
 
   handleClick() {
@@ -30,8 +30,9 @@ class Luck extends Component {
     });
   }
 
-  mouseHover(e) {
+  winnerBgChange() {
     let color = randomColor();
+
     this.setState({
       bgColor: color,
     });
@@ -64,9 +65,11 @@ class Luck extends Component {
             {this.state.num1 === 2 &&
             this.state.num2 === 2 &&
             this.state.num3 === 2 ? (
-              <h2 className="mainTitle display-1" id="winnerMessage">
-                You Won
-              </h2>
+              (
+                <h2 className="mainTitle display-1" id="winnerMessage">
+                  You Won
+                </h2>
+              ) && <style>{{ backgroundColor: this.state.bgColor }}</style> // check how to write style in tenary
             ) : (
               <>
                 <button
@@ -77,13 +80,18 @@ class Luck extends Component {
                   <span className="display-5">Spin</span>
                 </button>
 
-                <button
-                  onClick={this.clickHandler}
+                {/* START HERE TO SEE WHAT THE ISSUE IS WITH THE BG COLOR CHANGE  */}
+                {/* <button
+                  onClick={this.winnerBgChange}
                   style={{ backgroundColor: this.state.bgColor }}
-                  onMouseMove={this.mouseHover}
+                  
+
+                  onClick={this.winnerBgChange}
+                  style={{ backgroundColor: this.state.bgColor }}
+                  onMouseMove={this.winnerBgChange}
                 >
                   Test Button
-                </button>
+                </button> */}
               </>
             )}
           </div>
