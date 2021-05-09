@@ -28,7 +28,9 @@ class Luck extends Component {
       <div className="container">
         <div className="row">
           <div className="col">
-            <h1>Play the 444 Slot</h1>
+            <h1 className="mainTitle">
+              Play the <span className="mainTitleNumbers">444</span> Slot
+            </h1>
           </div>
         </div>
 
@@ -45,11 +47,11 @@ class Luck extends Component {
             {this.state.num1 === 4 &&
             this.state.num2 === 4 &&
             this.state.num3 === 4 ? (
-              <h2>Winner, Winner Chicken Dinner</h2>
+              <h2 className="mainTitle">Winner, Winner Chicken Dinner</h2>
             ) : (
               <button
                 onClick={this.handleClick}
-                className="btn btn-success btn-lg"
+                className="btn btn-success btn-lg mainTitle"
                 id="spinButton"
               >
                 Spin

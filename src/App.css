@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.mainTitle {
+  font-family: "Loved by the King", cursive;
+}
+
+.mainTitleNumbers {
+  font-family: "Amita", cursive;
+}
+
 @media all and (max-width: 480px) {
   #spinButton {
     width: 100%;
