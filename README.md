@@ -16,11 +16,11 @@ For all three numbers, the state is initialized to 0. There is a random number g
 
 ## Bug
 
-- [x] Write code to remove the `<button>` and replace it with a message for the winner
-- [ ] Figure out why the background isn't changing when the user wins
+- [x] B.01: Write code to remove the `<button>` and replace it with a message for the winner
+- [x] B.02: Figure out why the background isn't changing when the user wins
 
 ## Feature
 
-- [ ] Change background color to 5 different random colors when a user wins
-- [ ] Display winner's message in a pop-up modal
-- [ ] Add a play again button
+- [x] F.01: Change background color to random colors when a user wins
+- [ ] F.02: Display winner's message in a pop-up modal
+- [ ] F.03: Add a play again button
