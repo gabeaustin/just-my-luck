@@ -7,6 +7,8 @@ For all three numbers, the state is initialized to 0. There is a random number g
 ### Technology Used
 
 :heavy_check_mark:&nbsp;&nbsp; React <br />
+:heavy_check_mark:&nbsp;&nbsp; NPM <br />
+:heavy_check_mark:&nbsp;&nbsp; Bootstrap <br />
 
 <br/>
 <br/>

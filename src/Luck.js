@@ -17,9 +17,9 @@ class Luck extends Component {
   }
 
   handleClick() {
-    let random1 = Math.floor(Math.random() * 2) + 1;
-    let random2 = Math.floor(Math.random() * 2) + 1;
-    let random3 = Math.floor(Math.random() * 2) + 1;
+    let random1 = Math.floor(Math.random() * 4) + 1;
+    let random2 = Math.floor(Math.random() * 4) + 1;
+    let random3 = Math.floor(Math.random() * 4) + 1;
 
     this.setState({
       num1: random1,
@@ -66,15 +66,15 @@ class Luck extends Component {
 
         <div className="row">
           <div className="col-sm-12 col-md-12">
-            {this.state.num1 === 2 &&
-            this.state.num2 === 2 &&
-            this.state.num3 === 2
+            {this.state.num1 === 4 &&
+            this.state.num2 === 4 &&
+            this.state.num3 === 4
               ? this.setRandomColor()
               : ""}
 
-            {this.state.num1 === 2 &&
-            this.state.num2 === 2 &&
-            this.state.num3 === 2 ? (
+            {this.state.num1 === 4 &&
+            this.state.num2 === 4 &&
+            this.state.num3 === 4 ? (
               <h2 className="mainTitle display-1" id="winnerMessage">
                 You Won
               </h2>
