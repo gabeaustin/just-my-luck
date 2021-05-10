@@ -13,16 +13,23 @@ For all three numbers, the state is initialized to 0. There is a random number g
 <br/>
 <br/>
 
-:octocat:&nbsp;&nbsp;Just My Luck&nbsp;&nbsp;:octocat: <br/>
-:bowtie:&nbsp;&nbsp;A Gabe A. Production&nbsp;&nbsp;:bowtie:
+## To Do
+- [ ] Add instructions for the game - put above the container that holds the game
 
-## Bug
+## Bug(s)
 
 - [x] B.01: Write code to remove the `<button>` and replace it with a message for the winner
 - [x] B.02: Figure out why the background isn't changing when the user wins
 
-## Feature
+## Feature(s)
 
 - [x] F.01: Change background color to random colors when a user wins
 - [ ] F.02: Display winner's message in a pop-up modal
 - [ ] F.03: Add a play again button
+
+<br/>
+<br/>
+
+---
+:octocat:&nbsp;&nbsp;Just My Luck&nbsp;&nbsp;:octocat: <br/>
+:bowtie:&nbsp;&nbsp;A Gabe A. Production&nbsp;&nbsp;:bowtie:
