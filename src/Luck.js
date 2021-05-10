@@ -51,7 +51,9 @@ class Luck extends Component {
   }
 
   setRandomColor() {
-    setInterval(document.body.style.backgroundColor = this.getRandomColor(), 2000);
+    setInterval(() => {
+      document.body.style.backgroundColor = "#000" && this.getRandomColor();
+    }, 500);
   }
 
   render() {
@@ -81,11 +83,8 @@ class Luck extends Component {
             {this.state.num1 === 2 &&
             this.state.num2 === 2 &&
             this.state.num3 === 2 ? (
-              <h2 className="mainTitle display-1" id="winnerMessage">
-                You Won {this.setRandomColor()}
-              </h2>
+              (<h2 className="mainTitle display-1" id="winnerMessage">You Won</h2> && <>{this.setRandomColor()}</> )
             ) : (
-              //   <style>{{ backgroundColor: this.state.bgColor }}</style> // check how to write style in tenary
               <>
                 <button
                   onClick={this.handleClick}
