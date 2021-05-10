@@ -9,13 +9,16 @@ class Luck extends Component {
       num2: 0,
       num3: 0,
     };
-    this.handleClick = this.handleClick.bind(this);
 
     this.state = {
       bgColor: "",
       display: false,
     };
+
+    this.handleClick = this.handleClick.bind(this);
     this.winnerBgChange = this.winnerBgChange.bind(this);
+    this.getRandomColor = this.getRandomColor.bind(this);
+    this.setRandomColor = this.setRandomColor.bind(this);
   }
 
   handleClick() {
@@ -36,6 +39,19 @@ class Luck extends Component {
     this.setState({
       bgColor: color,
     });
+  }
+
+  getRandomColor() {
+    let letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  setRandomColor() {
+    setInterval(document.body.style.backgroundColor = this.getRandomColor(), 2000);
   }
 
   render() {
@@ -65,12 +81,11 @@ class Luck extends Component {
             {this.state.num1 === 2 &&
             this.state.num2 === 2 &&
             this.state.num3 === 2 ? (
-              (
-                <h2 className="mainTitle display-1" id="winnerMessage">
-                  You Won
-                </h2>
-              ) && <style>{{ backgroundColor: this.state.bgColor }}</style> // check how to write style in tenary
+              <h2 className="mainTitle display-1" id="winnerMessage">
+                You Won {this.setRandomColor()}
+              </h2>
             ) : (
+              //   <style>{{ backgroundColor: this.state.bgColor }}</style> // check how to write style in tenary
               <>
                 <button
                   onClick={this.handleClick}
@@ -79,19 +94,6 @@ class Luck extends Component {
                 >
                   <span className="display-5">Spin</span>
                 </button>
-
-                {/* START HERE TO SEE WHAT THE ISSUE IS WITH THE BG COLOR CHANGE  */}
-                {/* <button
-                  onClick={this.winnerBgChange}
-                  style={{ backgroundColor: this.state.bgColor }}
-                  
-
-                  onClick={this.winnerBgChange}
-                  style={{ backgroundColor: this.state.bgColor }}
-                  onMouseMove={this.winnerBgChange}
-                >
-                  Test Button
-                </button> */}
               </>
             )}
           </div>
