@@ -1,13 +1,15 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Luck from "./Luck";
-// import TestYourLuck from "./TestYourLuck";
+// import Modal from "./Modal";
+import Instructions from "./Instructions";
 
 function App() {
   return (
     <div className="App container">
+      <Instructions />
       <Luck />
-      {/* <TestYourLuck /> */}
+      {/* <Modal /> */}
     </div>
   );
 }
