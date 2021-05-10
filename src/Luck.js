@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import randomColor from "randomcolor";
 
 class Luck extends Component {
   constructor(props) {
@@ -8,15 +7,11 @@ class Luck extends Component {
       num1: 0,
       num2: 0,
       num3: 0,
-    };
-
-    this.state = {
       bgColor: "",
       display: false,
     };
 
     this.handleClick = this.handleClick.bind(this);
-    this.winnerBgChange = this.winnerBgChange.bind(this);
     this.getRandomColor = this.getRandomColor.bind(this);
     this.setRandomColor = this.setRandomColor.bind(this);
   }
@@ -33,14 +28,6 @@ class Luck extends Component {
     });
   }
 
-  winnerBgChange() {
-    let color = randomColor();
-
-    this.setState({
-      bgColor: color,
-    });
-  }
-
   getRandomColor() {
     let letters = "0123456789ABCDEF";
     let color = "#";
@@ -52,7 +39,7 @@ class Luck extends Component {
 
   setRandomColor() {
     setInterval(() => {
-      document.body.style.backgroundColor = "#000" && this.getRandomColor();
+      document.body.style.backgroundColor = this.getRandomColor();
     }, 500);
   }
 
@@ -68,12 +55,11 @@ class Luck extends Component {
               Play the <span className="mainTitleNumbers">444</span> Slot
             </h1>
           </div>
-        </div>
-
-        <div className="row">
-          <div className="col">
-            <div className="display-1" id="starterNumbers">
-              {this.state.num1} {this.state.num2} {this.state.num3}
+          <div className="row">
+            <div className="col">
+              <div className="display-1" id="starterNumbers">
+                {this.state.num1} {this.state.num2} {this.state.num3}
+              </div>
             </div>
           </div>
         </div>
@@ -82,8 +68,16 @@ class Luck extends Component {
           <div className="col-sm-12 col-md-12">
             {this.state.num1 === 2 &&
             this.state.num2 === 2 &&
+            this.state.num3 === 2
+              ? this.setRandomColor()
+              : ""}
+
+            {this.state.num1 === 2 &&
+            this.state.num2 === 2 &&
             this.state.num3 === 2 ? (
-              (<h2 className="mainTitle display-1" id="winnerMessage">You Won</h2> && <>{this.setRandomColor()}</> )
+              <h2 className="mainTitle display-1" id="winnerMessage">
+                You Won
+              </h2>
             ) : (
               <>
                 <button
