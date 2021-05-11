@@ -41,6 +41,14 @@
   font-family: "Helvetica Neue", Arial;
 }
 
+.instructions {
+  font-family: "Helvetica Neue", Arial;
+}
+
+ul {
+  list-style-type: none;
+}
+
 @media all and (max-width: 480px) {
   #spinButton {
     width: 100%;
