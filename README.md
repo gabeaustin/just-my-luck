@@ -14,7 +14,7 @@ For all three numbers, the state is initialized to 0. There is a random number g
 <br/>
 
 ## To Do
-- [ ] Add instructions for the game - put above the container that holds the game
+- [x] Add instructions for the game - put above the container that holds the game
 
 ## Bug(s)
 
