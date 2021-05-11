@@ -1,8 +1,8 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Luck from "./Luck";
-// import Modal from "./Modal";
 import Instructions from "./Instructions";
+// import Modal from "./Modal";
 
 function App() {
   return (

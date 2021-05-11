@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Modal from "./Modal";
+// import Modal from "./Modal";
 
 class Luck extends Component {
   constructor(props) {
@@ -44,6 +44,10 @@ class Luck extends Component {
     }, 500);
   }
 
+  componentDidMount() {
+    document.body.style.backgroundColor = "#ffffed";
+  }
+
   render() {
     return (
       <div
@@ -77,7 +81,7 @@ class Luck extends Component {
             this.state.num2 === 2 &&
             this.state.num3 === 2 ? (
               <h2 className="mainTitle display-1" id="winnerMessage">
-                  <Modal />
+                {/* <Modal /> */}
                 You Won
               </h2>
             ) : (
