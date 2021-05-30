@@ -80,10 +80,20 @@ class Luck extends Component {
             {this.state.num1 === 2 &&
             this.state.num2 === 2 &&
             this.state.num3 === 2 ? (
-              <h2 className="mainTitle display-1" id="winnerMessage">
-                {/* <Modal /> */}
-                You Won
-              </h2>
+              <div>
+                <h2 className="mainTitle display-1" id="winnerMessage">
+                  {/* <Modal /> */}
+                  You Won
+                </h2>
+
+                <button
+                  onClick={this.handleClick}
+                  className="btn btn-success btn-lg mainTitle"
+                  id="spinButton"
+                >
+                  <span className="display-5">Play Again</span>
+                </button>
+              </div>
             ) : (
               <>
                 <button
